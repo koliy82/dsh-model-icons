@@ -1,0 +1,5 @@
+# Build artifacts: the release tarball is attached to a GitHub Release, not
+# committed.
+*.tgz
+dist/
+node_modules/

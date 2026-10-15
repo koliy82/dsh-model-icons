@@ -1,0 +1,16 @@
+# dsh bundle patch: inserts the model-icons host half into a profile's layer stack.
+#
+# The row addresses the entry as a path relative to *this package's* directory,
+# which is the base URL the loader gives rows coming from a bundle patch:
+#
+#   - The harness caches one ES module per resolved URL and never evicts that
+#     cache for a profile plugin, so a process that already imported this package
+#     by its bare name would keep running the old code forever. `lib/live.js` is a
+#     byte-identical copy of the stable entry (`lib/index.js`), so naming it here
+#     hands such a process a URL it has never imported: the entry loads, and from
+#     then on reloads its own implementation on every file change.
+#   - A relative path goes straight to a file URL instead of through the
+#     specifier router, and stays correct on any machine and in any profile.
+- insert:
+    - id: dsh-model-icons
+      name: './lib/live.js'

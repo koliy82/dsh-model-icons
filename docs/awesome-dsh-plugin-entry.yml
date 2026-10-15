@@ -1,0 +1,25 @@
+# Ready-to-submit entry for the awesome-dsh-plugin registry.
+#
+# Copy to:  data/plugins/koliy82__dsh-model-icons.yml
+#
+# Rules this file already satisfies:
+#   - `url` matches the repository exactly;
+#   - `description.en` and `description.zh` are both quoted, because they
+#     contain ": ", and both end with a full stop;
+#   - no `npm:` key — the registry derives the npm mapping from the published
+#     package's `repository` field and rejects a hand-written one;
+#   - category `ui`, where the other model-selector plugins are filed;
+#   - `tarball:` points at a version-free asset name behind `latest/download/`,
+#     so the link does not rot at the next release. Drop this line if the package
+#     is ever published to npm.
+#
+# The repository must be at least one day old when the PR opens: CI checks it.
+
+url: https://github.com/koliy82/dsh-model-icons
+name: koliy82/dsh-model-icons
+category: ui
+description:
+  en: 'Vendor marks in the model picker: the host half mirrors the provider''s public model catalog and its logo set to a loopback route (rustvy.xyz by default, origin overridable), and the browser half paints one monochrome CSS-mask mark per model in the composer model menu, the composer model button and the /model popup, with a skin-aware row that hides a competing lockup, vendor rules for models the mirror does not list, and a monogram chip when a logo could not be fetched.'
+  zh: '模型选择器里的厂商标志：宿主端把服务商公开的模型目录与图标集镜像到本机回环路由（默认 rustvy.xyz，来源可覆盖），浏览器端用 CSS 蒙版以当前文字色为每个模型绘制一枚单色标志，覆盖输入区模型菜单、模型按钮与 /model 弹窗；对重绘选择器的皮肤会隐藏其自带标志以避免重复，镜像未收录的模型按 id 规则识别，图标获取失败时退化为字母缩写方块。'
+
+tarball: https://github.com/koliy82/dsh-model-icons/releases/latest/download/dsh-model-icons.tgz

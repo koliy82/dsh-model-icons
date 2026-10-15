@@ -1,0 +1,61 @@
+{
+  "name": "dsh-model-icons",
+  "version": "1.0.0",
+  "description": "Vendor marks in the DeepSeek Harness model picker: the host half mirrors the provider's model catalog and logo set to loopback, and the browser half draws one monochrome mark per model row, the way the provider's own dashboard draws it.",
+  "type": "module",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek",
+    "deepseek-harness",
+    "harness-plugin",
+    "model-picker",
+    "model-icons",
+    "vendor-logo",
+    "web-gui",
+    "ui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koliy82/dsh-model-icons.git"
+  },
+  "homepage": "https://github.com/koliy82/dsh-model-icons#readme",
+  "bugs": {
+    "url": "https://github.com/koliy82/dsh-model-icons/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "lib",
+    "client",
+    "cordis.patch.yml",
+    "install.ps1",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "prepublishOnly": "node scripts/prepublish-check.mjs"
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./live": "./lib/live.js",
+    "./client": "./client/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  }
+}
